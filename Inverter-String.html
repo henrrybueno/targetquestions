@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+</head>
+<body>
+    <h1>Inverter String</h1>
+    <script>
+        function inverterString(str) {
+            let strInvertida = '';
+            
+            for (let i = str.length - 1; i >= 0; i--) {
+                strInvertida += str[i];
+            }
+
+            return strInvertida;
+        }
+
+        const texto = prompt("Informe a string para inverter:");
+        const resultado = inverterString(texto);
+        alert(`A string invertida é: ${resultado}`);
+    </script>
+</body>
+</html>

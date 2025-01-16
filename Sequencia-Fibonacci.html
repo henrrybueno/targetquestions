@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        function fibonacciSequenceUntil(number) {
+            let a = 0, b = 1;
+            const fibonacciSequence = [a, b];
+
+            while (b <= number) {
+                const next = a + b;
+                fibonacciSequence.push(next);
+                a = b;
+                b = next;
+            }
+
+            return fibonacciSequence;
+        }
+
+        function checkFibonacci(number) {
+            const fibonacciNumbers = fibonacciSequenceUntil(number);
+
+            if (fibonacciNumbers.includes(number)) {
+                return `O número ${number} pertence à sequência de Fibonacci.`;
+            } else {
+                return `O número ${number} não pertence à sequência de Fibonacci.`;
+            }
+        }
+
+        const numero = prompt("Informe um número para verificar se pertence à sequência de Fibonacci:");
+        const resultado = checkFibonacci(Number(numero));
+        alert(resultado);
+    </script>
+</body>
+</html>
