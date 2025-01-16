@@ -157,7 +157,6 @@ const faturamentoMensal = [
   { dia: 8, faturamento: 0 },
   { dia: 9, faturamento: 600 },
   { dia: 10, faturamento: 0 },
-  // Adicione mais dados conforme necessário
 ];
 
 function menorFaturamento(faturamentoMensal) {
